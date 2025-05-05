@@ -15,12 +15,25 @@
       Jain Savories and Sweets 
     </header>
 
-    <nav>
+    <nav class="desktop-nav">
       <a href="#products">Products</a>
       <a href="#comingsoon">Launching Soon</a>
       <a href="#aboutus">About Us</a>
       <a href="#order">Place Order</a>
     </nav>
+    
+    <!-- Hamburger button for mobile -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<!-- Mobile nav overlay -->
+<div id="navOverlay" class="nav-overlay">
+  <a href="#products">Products</a>
+  <a href="#comingsoon">Launching Soon</a>
+  <a href="#aboutus">About Us</a>
+  <a href="#order">Place Order</a>
+</div>
+
+    
 
     <section class="hero">
       <h1>Hunger to satisfy tastebuds never dies!!</h1>
@@ -119,7 +132,8 @@
         <textarea id="Order Details" name="entry.839337160" placeholder="Your Order Details" required></textarea>
 
         <div class="button-container">
-        <button type="submit" style="width: 295px" >Submit</button>
+        <button type="submit" style="width: 295px" >Submit</button> <br> <br>
+
         <button type="reset" style="width: 295px" onclick="resetForm()">Reset</button>
         </div>
 
@@ -176,12 +190,30 @@
 
   window.onscroll = function () {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = 'block';
+     btn.style.display = 'block';
     } else {
       btn.style.display = 'none';
     }
   };
 </script>
+
+<script>
+  function toggleMenu() {
+    const navOverlay = document.getElementById('navOverlay');
+    navOverlay.classList.toggle('show');
+  }
+
+  // Automatically close the nav overlay when a link is clicked
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("#navOverlay a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navOverlay").classList.remove("show");
+      });
+    });
+  });
+</script>
+
 
     
     <footer>

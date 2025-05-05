@@ -29,18 +29,70 @@ header {
 }
 
 /* Navigation */
-nav {
+nav.desktop-nav {
   text-align: center;
   margin-top: 10px;
 }
 
-nav a {
+nav.desktop-nav a {
   margin: 0 15px;
   text-decoration: none;
   color: #195232; /* Deep green */
   font-weight: bold;
   font-size: 1.1rem;
 }
+
+/* Hide hamburger and overlay by default */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #195232;
+  padding: 15px;
+  text-align: right;
+}
+
+/* Mobile nav overlay */
+.nav-overlay {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff1da;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-overlay a {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: #800000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-overlay.show {
+  display: flex;
+}
+
+/* Media queries to toggle navs */
+@media (max-width: 768px) {
+  nav.desktop-nav {
+    display: none; /* Hide desktop nav */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger */
+  }
+}
+
+
+
 
 /* Hero Section */
 .hero {
