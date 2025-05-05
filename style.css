@@ -1,0 +1,224 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #fff8f0;
+  background-image: url('Rangoli background design.jpg');
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover; /* Ensures the image covers the entire page */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  color: #4d2c19;
+  position: relative;
+}
+
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.8); /* translucent white */
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #800000; /* Maroon */
+  padding: 1rem;
+  text-align: center;
+  color: #ffd700; /* Turmeric Yellow */
+  font-size: 2.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #195232; /* Deep green */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: #800000;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+}
+
+/* Products Grid */
+.products, .coming-soon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.product, .soon {
+  background: #fff;
+  border: 2px solid #ffd700;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.product:hover, .soon:hover {
+  transform: scale(1.05);
+}
+
+.product img, .soon img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product h3, .soon h3 {
+  margin-top: 0.5rem;
+  color: #800000;
+}
+
+/* Festive Section */
+.festive {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #4d2c19;
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+
+/* About Us Section */
+.about-us {
+  background-color: #fff1da;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  border: 2px dashed #c15e00;
+}
+
+.about-us h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #800000;
+  margin-bottom: 1rem;
+}
+
+/* Order Form Section */
+.order-form {
+  background-color: #fff1da;
+  margin: 3rem 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2px dashed #c15e00;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.order-form h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #800000;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.order-form p {
+  color: #4d2c19;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.styled-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.styled-form label {
+  text-align: left;
+  font-weight: bold;
+  color: #195232;
+}
+
+.styled-form input,
+.styled-form textarea {
+  padding: 0.8rem;
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.styled-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.styled-form button {
+  background-color: #800000;
+  color: #ffd700;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.styled-form button:hover {
+  background-color: #a00000;
+}
+
+/*Back to top*/
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  padding: 10px 15px;
+  font-size: 20px;
+  background-color: #ffd700;
+  color: #800000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+#backToTopBtn:hover {
+  opacity: 1;
+}
+
+
+/* Footer */
+footer {
+  background-color: #800000;
+  padding: 1rem;
+  text-align: center;
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .hero {
+    font-size: 2rem;
+    padding: 3rem 1rem;
+  }
+}

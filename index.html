@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jain Savories and Sweets </title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="overlay">
+
+    <header>
+      Jain Savories and Sweets 
+    </header>
+
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#comingsoon">Launching Soon</a>
+      <a href="#aboutus">About Us</a>
+      <a href="#order">Place Order</a>
+    </nav>
+
+    <section class="hero">
+      <h1>Hunger to satisfy tastebuds never dies!!</h1>
+    </section>
+    
+    <h2 class="festive">Products</h2>
+
+    <section id="products" class="products">
+      
+      <div class="product">
+        <img src="coconut-burfi.webp" alt="Coconut Barfi">
+        <h3>Coconut Barfi</h3>
+        <P> Rs. 10 per piece </P>
+      </div>
+      <div class="product">
+        <img src="almond-milk-burfi.jpg" alt="Almond Milk Barfi">
+        <h3>Almond Milk Barfi</h3>
+        <P> Rs. 15 per piece </P>
+      </div>
+      <div class="product">
+        <img src="Besan-Burfi.jpg" alt="Besan Barfi">
+        <h3>Besan Barfi</h3>
+        <P> Rs. 12 per piece </P>
+      </div>
+      <div class="product">
+        <img src="Chocolate-Barfi.jpg" alt="Chocolate Barfi">
+        <h3>Chocolate Barfi</h3>
+        <P> Rs. 11 per piece </P>
+      </div>
+    </section>
+
+    <h2 class="festive">Launching Soon!</h2>
+
+    <section id="comingsoon" class="coming-soon">
+      <div class="soon">
+        <img src="Mysore-Pak.jpg" alt="Mysore Pak">
+        <h3>Mysore Pak</h3>
+      </div>
+      <div class="soon">
+        <img src="Kara-Sev.webp" alt="Kara Sev">
+        <h3>Kara Sev</h3>
+      </div>
+      <div class="soon">
+        <img src="Chakkli.jpg" alt="Chakkli">
+        <h3>Chakkli</h3>
+      </div>
+    </section>
+
+    <div style="height: 50px;"></div>
+
+    
+    <section id="aboutus" class="about-us">
+      <h2>About Us </h2>
+    <p><em>Authentic South Indian Sweets & Savories – Homemade with Heart</em></p>
+    
+    <p>
+      At <strong>Jain Savories and Sweets </strong>, we bring you the finest homemade South Indian delicacies 
+      crafted with authenticity, care, and devotion. Rooted in tradition and guided by Jain principles, 
+      our offerings are prepared with the freshest ingredients—just like how it’s done at home.
+    </p>
+
+    <h3>Our Unique Promise:</h3>
+    <ul>
+      <p>Prepared only between sunrise and sunset</p>
+      <p>Made in a spiritually pure environment (Shuddi)</p>
+      <p>Flour freshly ground in-house for every batch</p>
+      <p>Crafted with Prashuk (purified) water</p>
+      <p>No root vegetables—aligned with Jain dietary values</p>
+      <p>Strict hygiene practices at every step</p>
+      <p>Organic and health-focused ingredients</p>
+      <p>Personapzed order taking for your unique needs</p>
+      <p>Vegan options available</p>
+    </ul>
+
+    <p>
+      Whether you're looking for a festive treat or everyday indulgence, <strong>Jain Savories and Sweets </strong> 
+      delivers purity, taste, and tradition—right to your doorstep.
+    </p>
+    </section>
+
+    <section id="order" class="order-form">
+      <h2>Place Your Order</h2>
+      <p>Fill out the form below to place your sweet orders!</p>
+    
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSexezg8VR7qi_FzpuBSLQ8LNBwpmwWV83NGP3MXQHD3AcC8Bw/formResponse" method="POST" target="hidden_iframe" onsubmit="setTimeout(showThankYou, 100);" class="styled-form">
+        <input type="hidden" name="fvv" value="1">
+        
+    
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="entry.2005620554" pattern="[A-Za-z ]+" placeholder="Your Name" required>
+    
+        <label for="Phone number">Phone Number:</label>
+        <input type="tel" id="Phone number" name="entry.1166974658" pattern=[0-9]{10} placeholder="Your 10 digit mobile number" required>
+    
+        <label for="Order Details">Order Details:</label>
+        <textarea id="Order Details" name="entry.839337160" placeholder="Your Order Details" required></textarea>
+
+        <div class="button-container">
+        <button type="submit" style="width: 295px" >Submit</button>
+        <button type="reset" style="width: 295px" onclick="resetForm()">Reset</button>
+        </div>
+
+      </form>
+    
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    
+      <div id="thankyou_message" style="display:none; text-align:center; margin-top:20px;">
+        <h2>Thank you for your order!</h2>
+        <p>We will contact you shortly.</p>
+      </div>
+    </section>
+
+    
+
+    <script>
+      function resetForm() {
+        document.querySelector('.order-form form').resetForm();
+      }
+    </script>
+
+    <script>
+    function showThankYou() {
+     // document.querySelector('.order-form form').style.display = 'none';
+            document.getElementById('thankyou_message').style.display = 'block';
+      
+    }
+    </script>
+
+    <script>
+      function clearForm() {
+        event.preventDefault(); // prevent actual submission
+        document.getElementById("myForm").reset(); // reset all fields
+        // Optional: handle form data or send it via AJAX here
+      }
+    </script>
+
+    <button onclick="scrollToTop()" id="backToTopBtn" title="Go to top">Go to Home</button>
+  <script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  const btn = document.getElementById('backToTopBtn');
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = 'block';
+    } else {
+      btn.style.display = 'none';
+    }
+  };
+</script>
+
+    
+    <footer>
+      <p>Mail us at: <a href="mailto:your@email.com">jainsavories.2025@gmail.com</a></p>
+    </footer>
+
+  </div> <!-- end overlay -->
+  
+  
+    
+</body>
+</html>
